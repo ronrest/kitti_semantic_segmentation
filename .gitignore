@@ -1,2 +1,4 @@
 models/*
 data.pickle
+*.pyc
+__pycache__/*
