@@ -103,3 +103,20 @@ def create_data_dict(data_dir, img_size=[25, 83]):
     return data
 
 
+if __name__ == '__main__':
+    data_dir = "/path/to/data_road" # Path to the kitti road dataset
+    pickle_file = "data.pickle"
+
+    # How to chose dim sizes, similar aspect ratio to original, but:
+    # To allow up to 3 downsamples, pick multiples of 8   eg []
+    # To allow up to 4 downsamples, pick multiples of 16
+    # To allow up to 5 downsamples, pick multiples of 32  eg [32, 96]
+    #
+    # Aspect ratio is approx 1:3
+    # original_dims = np.array([375, 1242])
+    # aspect = 375/1242.  # 0.30193236714975846
+    img_size = [32, 96]
+    # img_size = [64, 192]
+
+    data = create_data_dict(data_dir=data_dir, img_size=img_size)
+    obj2pickle(data, pickle_file)
