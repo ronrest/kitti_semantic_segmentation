@@ -1,5 +1,5 @@
 models/*
-data.pickle
+*.pickle
 model_nanny
 *.pyc
 __pycache__/*
