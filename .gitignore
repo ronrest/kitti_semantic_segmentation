@@ -1,4 +1,7 @@
 models/*
 data.pickle
+model_nanny
 *.pyc
 __pycache__/*
+output_vids
+remote
