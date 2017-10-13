@@ -6,6 +6,8 @@ import scipy
 from scipy import misc
 import pickle
 
+id2label = ["non-road", "road"]
+label2id = {val:id for id,val in enumerate(id2label)}
 
 # ==============================================================================
 #                                                                 MAYBE_MAKE_DIR
