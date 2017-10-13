@@ -43,6 +43,27 @@ def pickle2obj(file):
 
 
 # ==============================================================================
+#                                                                       STR2FILE
+# ==============================================================================
+def str2file(s, file, append=True, sep="\n"):
+    """ Takes a string and saves it to a file. By default it appends to end of
+        file.
+    """
+    # Setup mode (append, or replace)
+    mode = "a" if append else "w"
+
+    # Add on newline if append is selected
+    if append and (sep != ""):
+        s = sep + s
+
+    # Ensure parent directory and necesary file structure exists
+    maybe_make_pardir(file)
+
+    with open(file, mode=mode) as textFile:
+        textFile.write(s)
+
+
+# ==============================================================================
 #                                                               CREATE_DATA_DICT
 # ==============================================================================
 def create_data_dict(data_dir, img_size=[25, 83]):
