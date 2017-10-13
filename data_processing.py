@@ -1,3 +1,11 @@
+"""
+Contains useful functions for processsing the dataset, as well as file I/O
+operations.
+
+If this script is run directly from command line, then it will create the
+pickled data according to the settings in the main loop at the bottom of this
+script.
+"""
 from __future__ import print_function, division, unicode_literals
 import os
 import glob
