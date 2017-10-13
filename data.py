@@ -96,13 +96,19 @@ def str2file(s, file, append=True, sep="\n"):
 #                                                               CREATE_DATA_DICT
 # ==============================================================================
 def create_data_dict(data_dir, img_size=[25, 83]):
-    """ data_road = directory named `data_road` containing
-                    `testing` and `training` subdirectories
+    """ Given the path to the root directory of the KITTI road dataset,
+        it creates a dictionary of the data as numpy arrays.
+
+        data_dir = directory containing `testing` and `training` subdirectories
+
+        returns a dictionary with the keys:
+
+        data["X_train"] = numpy array of input images (0-255 uint8)
+        data["Y_train"] = numpy array of label images (uint8)
+                          (pixel value representing class label)
     """
     print("Creating data dictionary")
     print("- Using data at:", data_dir)
-    # np.array([375, 1242])/15  # array([ 25. ,  82.8])
-    # img_size = [25, 83]
 
     # Directories
     imgs_dir = os.path.join(data_dir, "training/image_2")
