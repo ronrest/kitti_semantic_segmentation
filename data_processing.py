@@ -163,6 +163,7 @@ def create_data_dict(data_dir, img_size=[25, 83]):
 
 if __name__ == '__main__':
     data_dir = "/path/to/data_road" # Path to the kitti road dataset
+    data_dir = "/home/ronny/TEMP/kitti_road_data/data_road"
     pickle_file = "data.pickle"
 
     # How to chose dim sizes (for architectures that use SAME padding):
