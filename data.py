@@ -63,6 +63,15 @@ def pickle2obj(file):
 
 
 # ==============================================================================
+#                                                                       FILE2STR
+# ==============================================================================
+def file2str(file):
+    """ Takes a file path and returns the contents of that file as a string."""
+    with open(file, "r") as textFile:
+        return textFile.read()
+
+
+# ==============================================================================
 #                                                                       STR2FILE
 # ==============================================================================
 def str2file(s, file, append=True, sep="\n"):
